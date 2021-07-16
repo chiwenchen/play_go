@@ -15,10 +15,9 @@ type linkedList struct {
 }
 
 func (l *linkedList) prepend(n *node) {
-	currentHead := l.head
 	n.next = l.head
-	if currentHead != nil {
-		currentHead.previous = n
+	if l.head != nil {
+		l.head.previous = n
 	}
 
 	l.head = n
@@ -81,6 +80,6 @@ func main() {
 	list.append(node4)
 
 	fmt.Println(list)
-	list.printValues("front")
-	list.printValues("rear")
+	list.printValues("front") // 3 2 1 4
+	list.printValues("rear")  // 4 1 2 3
 }
