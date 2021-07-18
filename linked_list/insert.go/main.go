@@ -35,7 +35,7 @@ func (head *Node) insert(m int) {
 		if newNode.value < pre.next.value {
 			newNode.next = pre.next
 			pre.next = &newNode
-			break
+			return
 		} else {
 			pre = pre.next
 		}
