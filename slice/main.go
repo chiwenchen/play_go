@@ -7,6 +7,8 @@ func main() {
 
 	fmt.Println(sum(xi...))
 
+	fmt.Println("I am last element:", xi[len(xi)-1])
+
 }
 
 func sum(nums ...int) int {

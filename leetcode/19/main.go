@@ -25,6 +25,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 
 	counter := head
 
+	// 這段是算出List有多長
 	for {
 		if counter == nil {
 			break
@@ -36,6 +37,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 
 	target := head
 
+	// 這段是要把 target移到要刪除的Node的前一個
 	for i := 1; i < nodeLength-n; i++ {
 		target = target.Next
 	}
